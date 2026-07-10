@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandeep Mishra | Independent Mattress Consultant | Luxury Sleep Expert</title>
+    <meta name="description" content="Premium mattress consultation by Sandeep Mishra. Unbiased expertise for luxury sleep and orthopedic health.">
+    
+    <!-- Google Fonts: Elegant Serif and Modern Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --saatva-gold: #c5a059;
+            --saatva-dark: #2c3e50;
+            --saatva-grey: #5d6d7e;
+            --black: #111;
+            --white: #fff;
+            --bg-light: #f8f9f9;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; color: var(--saatva-dark); line-height: 1.6; }
+
+        /* Announcement Bar */
+        .announcement-bar {
+            background: var(--black);
+            color: var(--white);
+            text-align: center;
+            padding: 8px;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+        .announcement-bar a { color: var(--saatva-gold); font-weight: 700; text-decoration: none; margin-left: 10px; }
+
+        /* Header & Navigation */
+        header { background: var(--white); border-bottom: 1px solid #eee; }
+        .utility-nav {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: flex-start;
+            padding: 10px 20px;
+            font-size: 0.75rem;
+            color: #777;
+            gap: 20px;
+        }
+        .main-header {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        .logo { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--saatva-gold); text-decoration: none; font-weight: 400; }
+        
+        .main-nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 10px 0;
+            font-size: 0.9rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .main-nav a { text-decoration: none; color: var(--saatva-dark); }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 80vh;
+            background: url('https://images.unsplash.com/photo-1505693413171-293669746a57?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--saatva-dark);
+        }
+        .hero-overlay {
+            background: rgba(255, 255, 255, 0.4);
+            padding: 60px;
+            border-radius: 2px;
+            max-width: 900px;
+        }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 15px; font-weight: 400; }
+        .hero p { font-size: 1.2rem; margin-bottom: 30px; font-weight: 300; color: #444; }
+
+        .cta-container { display: flex; gap: 20px; justify-content: center; }
+        .btn {
+            padding: 15px 40px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+        .btn-dark { background: #3c4c5c; color: var(--white); }
+        .btn-dark:hover { background: var(--saatva-dark); }
+
+        /* Featured Content Section */
+        .section-padding { padding: 80px 20px; max-width: 1200px; margin: auto; }
+        .section-title { font-family: 'Playfair Display', serif; font-size: 2.5rem; text-align: center; margin-bottom: 50px; font-weight: 400; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .card { background: var(--bg-light); padding: 40px; border: 1px solid #eee; transition: 0.3s; }
+        .card:hover { border-color: var(--saatva-gold); }
+        .card h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 15px; font-weight: 400; }
+
+        /* FAQ Section */
+        .faq-section { background: var(--white); }
+        .faq-item { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+        .faq-question { font-weight: 600; font-size: 1.1rem; margin-bottom: 10px; cursor: pointer; }
+
+        /* Floating WhatsApp Widget */
+        .whatsapp-widget {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background: #fff;
+            padding: 12px 20px;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            z-index: 1000;
+            border: 1px solid #eee;
+        }
+        .whatsapp-dot { height: 10px; width: 10px; background: #25D366; border-radius: 50%; }
+
+        /* Footer */
+        footer { background: #f4f4f4; padding: 60px 20px; text-align: center; border-top: 1px solid #eee; }
+        footer p { font-size: 0.9rem; color: #888; margin-top: 20px; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .cta-container { flex-direction: column; }
+        }
+    </style>
+
+    <!-- Schema.org for SEO/AEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Sandeep Mishra",
+      "jobTitle": "Independent Mattress Consultant",
+      "telephone": "+91-9811008230",
+      "description": "Expert independent mattress consultant providing luxury sleep solutions and orthopedic audits.",
+      "knowsAbout": ["Mattress Science", "Sleep Ergonomics", "Luxury Bedding"],
+      "address": { "@type": "PostalAddress", "addressCountry": "IN" }
+    }
+    </script>
+</head>
+<body>
+
+    <div class="announcement-bar">
+        Limited Time: Free 15-Minute Sleep Audit | <a href="tel:9811008230">Call 9811008230 & SAVE!</a>
+    </div>
+
+    <header>
+        <div class="utility-nav">
+            <span>Contact Us</span>
+            <span>Why Consult?</span>
+            <span>Visit a Viewing Room</span>
+        </div>
+        <div class="main-header">
+            <a href="#" class="logo">sandeep mishra</a>
+            <div style="font-size: 0.9rem; color: #555;">
+                Expert Support: <strong>9811008230</strong>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <a href="#types">Mattress Types</a>
+            <a href="#problems">Sleep Problems</a>
+            <a href="#audits">Brand Audits</a>
+            <a href="#luxury">Luxury Series</a>
+            <a href="#quiz" style="color: #b21f1f;">Free Quiz</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-overlay">
+            <h1>Luxury Sleep Made Simple</h1>
+            <p>The highest quality independent consultation to help you choose the right mattress, handcrafted for your specific health needs.</p>
+            <div class="cta-container">
+                <a href="tel:9811008230" class="btn btn-dark">Call an Expert</a>
+                <a href="#quiz" class="btn btn-dark">Take our mattress quiz</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="types" class="section-padding">
+        <h2 class="section-title">The Science of Mattress Types</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Natural Latex</h3>
+                <p>The gold standard for durability and cooling. Derived from rubber trees, it offers a responsive, 'on-top' feel that is perfect for India's humid climate.</p>
+            </div>
+            <div class="card">
+                <h3>Advanced Hybrids</h3>
+                <p>A combination of individually pocketed springs and premium comfort layers. Offers the best edge support and motion isolation for couples.</p>
+            </div>
+            <div class="card">
+                <h3>SmartGrid Technology</h3>
+                <p>A hyper-elastic polymer that adapts dynamically to your body. It provides firm support where needed and soft cushioning for pressure points.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="problems" class="section-padding bg-light" style="background: #f8f9f9;">
+        <h2 class="section-title">Solving Your Sleep Problems</h2>
+        <div class="grid">
+            <div class="card" style="background: #fff;">
+                <h3>Lower Back Pain & Sciatica</h3>
+                <p>We analyze the 'Push-Back' factor of your mattress to ensure your spine remains neutral, preventing nerve compression during sleep.</p>
+            </div>
+            <div class="card" style="background: #fff;">
+                <h3>Cervical & Neck Pain</h3>
+                <p>The mattress-pillow relationship is critical. We audit the upper-body contouring to ensure your neck is supported without strain.</p>
+            </div>
+            <div class="card" style="background: #fff;">
+                <h3>Hot Sleepers</h3>
+                <p>We evaluate the breathability of foam densities and fabric GSM to ensure you stay 2-3 degrees cooler throughout the night.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="audits" class="section-padding">
+        <h2 class="section-title">Independent Brand Audits</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 50px auto; color: #555;">I perform rigorous, brand-neutral audits on leading manufacturers to verify their claims vs. reality. My goal is to protect you from marketing jargon.</p>
+        <div class="grid">
+            <div class="card">
+                <h3>Indian D2C Audit</h3>
+                <p>Deep dives into Wakefit, SleepyCat, The Sleep Company, and Flo. We check density (GSM) and layer lifespan.</p>
+            </div>
+            <div class="card">
+                <h3>Traditional Giants</h3>
+                <p>Evaluation of legacy players like Sleepwell, Kurlon, and Duroflex to see if their 'Ortho' series meets medical standards.</p>
+            </div>
+            <div class="card">
+                <h3>Transparency Reports</h3>
+                <p>I decode the warranties and return policies that brands often hide in fine print, ensuring you get real protection.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="luxury" class="section-padding" style="background: #2c3e50; color: #fff;">
+        <h2 class="section-title" style="color: #fff;">The Luxury Series</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 50px auto; color: #ccc;">For those who seek the pinnacle of sleep technology. We consult on global luxury standards and high-end materials.</p>
+        <div class="grid">
+            <div class="card" style="background: rgba(255,255,255,0.1); color: #fff; border: none;">
+                <h3 style="color: #fff;">International Standards</h3>
+                <p>Consultation on brands like Tempur-Pedic, Saatva, and Stearns & Foster for global travelers and residents.</p>
+            </div>
+            <div class="card" style="background: rgba(255,255,255,0.1); color: #fff; border: none;">
+                <h3 style="color: #fff;">Elite Materials</h3>
+                <p>Analysis of organic Talalay latex, horsehair, and high-thread-count Tencel covers for superior thermoregulation.</p>
+            </div>
+            <div class="card" style="background: rgba(255,255,255,0.1); color: #fff; border: none;">
+                <h3 style="color: #fff;">Custom Builds</h3>
+                <p>Guiding you through the process of getting a custom-sized or custom-layered mattress built for your unique body type.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="quiz" class="section-padding" style="text-align: center;">
+        <h2 class="section-title">Take the Free Sleep Quiz</h2>
+        <div style="max-width: 700px; margin: auto; padding: 40px; border: 2px solid var(--saatva-gold);">
+            <p style="font-size: 1.2rem; margin-bottom: 30px;">Stop guessing. In 2 minutes, I will analyze your BMI, Sleep Position, and Pain Points to find your perfect mattress match.</p>
+            <a href="https://wa.me/919811008230?text=Hi%20Sandeep,%20I%20want%20to%20take%20the%20sleep%20quiz" class="btn btn-dark">Start My Free Assessment</a>
+        </div>
+    </section>
+
+    <section class="section-padding faq-section">
+        <h2 class="section-title">Sleep Expert FAQ</h2>
+        <div class="faq-item">
+            <div class="faq-question">Why use a consultant instead of a brand's free trial?</div>
+            <p>Free trials often lead to "Exchange Fatigue." I help you select the right material upfront based on your BMI and health history, saving you weeks of poor sleep.</p>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Is a hard mattress better for back pain?</div>
+            <p>Medical evidence suggests a 'Medium-Firm' surface is superior for spinal neutral alignment compared to a generic 'Hard' mattress.</p>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Do you work with international clients?</div>
+            <p>Yes. I provide remote sleep audits and brand recommendations for clients across India, Europe, and the USA.</p>
+        </div>
+    </section>
+
+    <a href="https://wa.me/919811008230" class="whatsapp-widget">
+        <div class="whatsapp-dot"></div>
+        <span>We're here to help</span>
+    </a>
+
+    <footer>
+        <div class="container">
+            <a href="#" class="logo">sandeep mishra</a>
+            <p>&copy; 2026 Sandeep Mishra | Independent Sleep Expert | Serving India & Global Markets</p>
+        </div>
+    </footer>
+
+</body>
+</html>
