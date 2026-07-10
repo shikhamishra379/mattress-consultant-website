@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+Allow: /blog.html
+Allow: /index.html
+
+# Sitemaps
+Sitemap: https://mattress-consultant-website.vercel.app/sitemap.xml
+
+# LLM Crawler Access
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
