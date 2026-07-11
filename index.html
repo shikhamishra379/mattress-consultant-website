@@ -318,22 +318,6 @@
             const qty = document.getElementById('qty').value;
             const budget = document.getElementById('budget').value;
             
-            // FORM LOGGING SYSTEM (For Lead Management)
-            const leadData = {
-                to_name: "Sandeep Mishra",
-                from_name: name,
-                reason: reason,
-                health_condition: diseases,
-                quantity: qty,
-                budget: budget,
-                timestamp: new Date().toISOString()
-            };
-
-            // Option 1: Simple Webhook Logging (Recommended for Beginners)
-            // You can use a free service like Formspree or a Google Script Webhook here.
-            // For now, we simulate the "Success" state and redirect to WhatsApp.
-            console.log("Lead captured for database:", leadData);
-
             const message = `Sandeep Mishra, here is the lead - reach out to them!%0A%0A` +
                             `*Name:* ${name}%0A` +
                             `*Reason:* ${reason}%0A` +
@@ -342,9 +326,29 @@
                             `*Budget:* ${budget}`;
             
             const whatsappUrl = `https://wa.me/919811008230?text=${message}`;
-            
-            // Redirecting user to WhatsApp
-            window.location.href = whatsappUrl;
+
+            // SEND LEAD TO GOOGLE SHEETS VIA FORMSPREE
+            fetch("https://formspree.io/f/mbdnrlbe", {
+                method: "POST",
+                body: JSON.stringify({
+                    "Consultant": "Sandeep Mishra",
+                    "Lead Name": name,
+                    "Requirement": reason,
+                    "Health Condition": diseases,
+                    "Qty": qty,
+                    "Budget": budget
+                }),
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                }
+            }).then(response => {
+                // Regardless of success, we redirect to WhatsApp immediately to ensure the deal isn't lost
+                window.location.href = whatsappUrl;
+            }).catch(error => {
+                console.error('Error logging lead:', error);
+                window.location.href = whatsappUrl;
+            });
         });
     </script>
 
