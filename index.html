@@ -155,7 +155,10 @@
 
         .section-padding { padding: 80px 20px; max-width: 1200px; margin: auto; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
-        .card { background: var(--white); padding: 40px; border: 1px solid #eee; }
+        .card { background: var(--white); padding: 0; border: 1px solid #eee; overflow: hidden; display: flex; flex-direction: column; }
+        .card img { width: 100%; height: 200px; object-fit: cover; border-bottom: 1px solid #eee; }
+        .card-content { padding: 30px; }
+        .card h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 15px; font-weight: 400; }
 
         .whatsapp-widget {
             position: fixed; bottom: 30px; left: 30px; background: #fff; padding: 12px 20px;
@@ -353,9 +356,27 @@
     <section id="types" class="section-padding">
         <h2 style="text-align:center; font-family:'Playfair Display'; font-size:2.5rem; margin-bottom:50px;">The Science of Comfort</h2>
         <div class="grid">
-            <div class="card"><h3>Natural Latex</h3><p>Gold standard for durability and cooling in India's humid climate.</p></div>
-            <div class="card"><h3>Advanced Hybrids</h3><p>Perfect for couples needing edge support and zero motion transfer.</p></div>
-            <div class="card"><h3>SmartGrid Technology</h3><p>Hyper-elastic polymer that adapts to your body's pressure points.</p></div>
+            <div class="card">
+                <img src="assets/latex.jpg" alt="Natural Latex">
+                <div class="card-content">
+                    <h3>Natural Latex</h3>
+                    <p>Gold standard for durability and cooling in India's humid climate.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/hybrid.jpg" alt="Advanced Hybrids">
+                <div class="card-content">
+                    <h3>Advanced Hybrids</h3>
+                    <p>Perfect for couples needing edge support and zero motion transfer.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/smartgrid.jpg" alt="SmartGrid Technology">
+                <div class="card-content">
+                    <h3>SmartGrid Technology</h3>
+                    <p>Hyper-elastic polymer that adapts to your body's pressure points.</p>
+                </div>
+            </div>
         </div>
     </section>
 
