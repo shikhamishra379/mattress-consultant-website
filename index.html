@@ -51,10 +51,71 @@
             margin: auto;
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-end; /* Align to bottom so mascot can sit above logo */
             padding: 20px;
+            position: relative;
         }
-        .logo { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--muted-gold); text-decoration: none; font-weight: 400; text-transform: lowercase; }
+        
+        /* Mascot & Logo Container */
+        .brand-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+        }
+
+        .mascot-wrapper {
+            position: absolute;
+            top: -65px;
+            left: 20px;
+            z-index: 1001;
+            display: flex;
+            align-items: center;
+        }
+
+        .cloud-mascot {
+            width: 70px;
+            height: auto;
+            animation: dropBounce 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, floatIdle 3s ease-in-out infinite 1.2s;
+            transform-origin: bottom center;
+        }
+
+        .speech-bubble {
+            background: var(--primary-navy);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            white-space: nowrap;
+            margin-left: 15px;
+            position: relative;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .speech-bubble::after {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-width: 8px 8px 8px 0;
+            border-style: solid;
+            border-color: transparent var(--primary-navy) transparent transparent;
+        }
+
+        .logo { 
+            font-family: 'Montserrat', sans-serif; 
+            font-size: 1.4rem; 
+            color: var(--primary-navy); 
+            text-decoration: none; 
+            font-weight: 500; 
+            text-transform: uppercase; 
+            letter-spacing: 0.15em; 
+            margin-top: 15px;
+        }
         
         .main-nav {
             display: flex;
@@ -67,6 +128,19 @@
             letter-spacing: 1.5px;
         }
         .main-nav a { text-decoration: none; color: var(--charcoal); }
+
+        /* Animations */
+        @keyframes dropBounce {
+            0% { transform: translateY(-200px) scale(0.8); opacity: 0; }
+            60% { transform: translateY(10px) scale(1.1); opacity: 1; }
+            80% { transform: translateY(-5px) scale(0.95); }
+            100% { transform: translateY(0) scale(1); }
+        }
+
+        @keyframes floatIdle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-4px); }
+        }
 
         /* Hero Section */
         .hero {
@@ -143,7 +217,13 @@
             border: 5px solid var(--saatva-gold);
         }
         .expert-content { flex: 1; min-width: 300px; }
-        .expert-content h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 20px; }
+        .expert-content h2 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 3.5rem; 
+            margin-bottom: 20px; 
+            color: var(--charcoal);
+            line-height: 1.1;
+        }
         .expert-tagline { color: var(--saatva-gold); font-weight: 600; font-size: 1.1rem; margin-bottom: 15px; }
         .expert-bio { font-size: 1rem; color: #555; }
 
@@ -247,7 +327,13 @@
             <a href="https://www.linkedin.com/in/sandeep-mishra-69ba479/" target="_blank">Connect on LinkedIn</a>
         </div>
         <div class="main-header">
-            <a href="#" class="logo">sandeep mishra</a>
+            <div class="brand-container">
+                <div class="mascot-wrapper">
+                    <img src="assets/cloud-mascot.png" alt="Sleep Guide" class="cloud-mascot">
+                    <div id="sleepTooltip" class="speech-bubble">Discover the science of comfort ↓</div>
+                </div>
+                <a href="index.html" class="logo">SANDEEP MISHRA</a>
+            </div>
             <div style="font-size: 0.9rem;">Expert Support: <strong>9811008230</strong></div>
         </div>
         <nav class="main-nav">
@@ -322,6 +408,15 @@
     </section>
 
     <script>
+        // Dismiss tooltip on scroll
+        window.addEventListener('scroll', function() {
+            const tooltip = document.getElementById('sleepTooltip');
+            if (window.scrollY > 50) {
+                tooltip.style.opacity = '0';
+                setTimeout(() => { tooltip.style.display = 'none'; }, 500);
+            }
+        });
+
         document.getElementById('assessmentForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -425,7 +520,7 @@
 
     <footer>
         <div class="container">
-            <a href="#" class="logo">sandeep mishra</a>
+            <a href="index.html" class="logo" style="margin-top:0;">SANDEEP MISHRA</a>
             <p style="margin-top: 10px; color: var(--charcoal); font-weight: 500;">Global Independent Mattress Advisor | वैश्विक गद्दे सलाहकार</p>
             
             <div style="font-size: 0.7rem; color: #777; margin-top: 25px; border-top: 1px solid #ddd; padding-top: 25px; max-width: 900px; margin-left: auto; margin-right: auto; line-height: 2;">
