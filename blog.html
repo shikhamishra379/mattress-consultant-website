@@ -11,28 +11,30 @@
     
     <style>
         :root {
+            --primary-navy: #1E293B;
+            --muted-gold: #C5A880;
+            --off-white: #FBF9F6;
+            --charcoal: #1F2937;
+            --muted-red: #B21F1F;
             --saatva-gold: #c5a059;
-            --saatva-dark: #2c3e50;
-            --saatva-grey: #5d6d7e;
-            --black: #111;
             --white: #fff;
             --bg-light: #f8f9f9;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Montserrat', sans-serif; color: var(--saatva-dark); line-height: 1.6; }
+        body { font-family: 'Montserrat', sans-serif; color: var(--charcoal); line-height: 1.6; }
 
         .announcement-bar {
-            background: var(--black);
+            background: #000;
             color: var(--white);
             text-align: center;
             padding: 8px;
             font-size: 0.8rem;
             letter-spacing: 1px;
         }
-        .announcement-bar a { color: var(--saatva-gold); font-weight: 700; text-decoration: none; margin-left: 10px; }
+        .announcement-bar a { color: var(--muted-gold); font-weight: 700; text-decoration: none; margin-left: 10px; }
 
-        header { background: var(--white); border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; }
+        header { background: var(--off-white); border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
         .utility-nav {
             max-width: 1200px;
             margin: auto;
@@ -51,35 +53,51 @@
             align-items: center;
             padding: 20px;
         }
-        .logo { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--saatva-gold); text-decoration: none; font-weight: 400; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--muted-gold); text-decoration: none; font-weight: 400; text-transform: lowercase; }
         
         .main-nav {
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 40px;
             padding-bottom: 15px;
-            font-size: 0.9rem;
-            font-weight: 400;
+            font-size: 0.85rem;
+            font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
         }
-        .main-nav a { text-decoration: none; color: var(--saatva-dark); }
+        .main-nav a { text-decoration: none; color: var(--charcoal); }
 
-        .blog-container { max-width: 800px; margin: 60px auto; padding: 0 20px; }
-        .blog-header { text-align: center; margin-bottom: 60px; }
-        .blog-header h1 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 20px; }
+        .blog-container { max-width: 850px; margin: 60px auto; padding: 0 20px; }
+        .blog-header { text-align: center; margin-bottom: 80px; }
+        .blog-header h1 { font-family: 'Playfair Display', serif; font-size: 3.2rem; margin-bottom: 20px; color: var(--charcoal); }
         
-        .post { margin-bottom: 80px; border-bottom: 1px solid #eee; padding-bottom: 60px; }
-        .post-meta { font-size: 0.85rem; color: var(--saatva-gold); font-weight: 600; margin-bottom: 10px; text-transform: uppercase; }
-        .post h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 20px; line-height: 1.2; }
-        .post-content { color: #444; font-size: 1.1rem; }
-        .post-content h3 { font-family: 'Playfair Display', serif; margin: 30px 0 15px; font-size: 1.6rem; color: var(--saatva-dark); }
-        .post-content p { margin-bottom: 20px; }
-        .post-content ul { margin: 0 0 20px 25px; }
-        .post-content li { margin-bottom: 10px; }
+        .post { margin-bottom: 100px; border-bottom: 1px solid #eee; padding-bottom: 80px; }
+        .post-meta { font-size: 0.8rem; color: var(--muted-red); font-weight: 700; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 2px; }
+        .post h2 { font-family: 'Playfair Display', serif; font-size: 2.4rem; margin-bottom: 25px; line-height: 1.2; color: var(--charcoal); }
+        .post-content { color: #333; font-size: 1.15rem; }
+        .post-content h3 { font-family: 'Playfair Display', serif; margin: 40px 0 20px; font-size: 1.8rem; color: var(--primary-navy); }
+        .post-content p { margin-bottom: 25px; }
+        .post-content ul, .post-content ol { margin: 0 0 25px 30px; }
+        .post-content li { margin-bottom: 12px; }
 
-        .contact-box { background: var(--bg-light); padding: 30px; border-left: 4px solid var(--saatva-gold); margin-top: 40px; }
-        .contact-box strong { display: block; margin-bottom: 10px; font-size: 1.2rem; }
+        .contact-box { background: var(--off-white); padding: 40px; border-left: 5px solid var(--muted-gold); margin-top: 50px; box-shadow: 0 10px 20px rgba(0,0,0,0.02); }
+        .contact-box strong { display: block; margin-bottom: 15px; font-size: 1.3rem; color: var(--charcoal); font-family: 'Playfair Display', serif; }
+
+        .btn {
+            padding: 16px 40px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            transition: all 0.4s ease;
+            border-radius: 2px;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+        }
+        .btn-dark { background: var(--primary-navy); color: var(--white); }
+        .btn-dark:hover { background: #0F172A; transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
 
         .whatsapp-widget {
             position: fixed; bottom: 30px; left: 30px; background: #fff; padding: 12px 20px;
@@ -96,6 +114,7 @@
             .post h2 { font-size: 1.8rem; }
         }
     </style>
+
 
     <!-- Schema.org for SEO/AEO -->
     <script type="application/ld+json">
