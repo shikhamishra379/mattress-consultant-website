@@ -107,6 +107,22 @@
         .whatsapp-widget { position: fixed; bottom: 30px; left: 30px; background: #fff; padding: 12px 25px; border-radius: 50px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); display: flex; align-items: center; gap: 12px; text-decoration: none; color: #333; font-weight: 700; z-index: 1000; border: 1px solid #eee; font-size: 0.9rem; }
         .whatsapp-dot { height: 10px; width: 10px; background: #25D366; border-radius: 50%; }
 
+        /* Trust Section Styles */
+        .trust-section { background-color: var(--white); border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+        .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: center; }
+        .trust-card { padding: 40px 20px; position: relative; }
+        .trust-card:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: -10px;
+            top: 20%;
+            height: 60%;
+            width: 1px;
+            background-color: #eee;
+        }
+        .trust-card h3 { font-family: 'Antonio', sans-serif; font-size: 2.2rem; margin-bottom: 10px; color: #000; text-transform: uppercase; }
+        .trust-card p { font-size: 0.9rem; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 1px; }
+
         footer { background: #000; color: #fff; padding: 80px 20px; text-align: center; }
         footer .signature-logo { color: #fff; display: block; margin-bottom: 20px; }
 
@@ -116,6 +132,12 @@
             .hero-headline { font-size: 2.5rem; }
             .main-nav { gap: 15px; font-size: 0.7rem; }
             .main-header { flex-direction: column; gap: 15px; }
+            .trust-grid { grid-template-columns: repeat(2, 1fr); }
+            .trust-card:nth-child(2)::after { display: none; }
+        }
+        @media (max-width: 480px) {
+            .trust-grid { grid-template-columns: 1fr; }
+            .trust-card::after { display: none; }
         }
     </style>
 
@@ -166,6 +188,28 @@
         </div>
         <div class="hero-image">
             <img src="assets/sandeep.jpg" alt="Sandeep Mishra - Global Sleep Consultant">
+        </div>
+    </section>
+
+    <section class="trust-section section-padding">
+        <h2 class="section-title">Why People Trust My Advice</h2>
+        <div class="trust-grid">
+            <div class="trust-card">
+                <h3>22+ Years</h3>
+                <p>Industry Experience</p>
+            </div>
+            <div class="trust-card">
+                <h3>Independent</h3>
+                <p>Brand-Neutral Advice</p>
+            </div>
+            <div class="trust-card">
+                <h3>Luxury & Hospitality</h3>
+                <p>Residential and B2B Expertise</p>
+            </div>
+            <div class="trust-card">
+                <h3>Science-Based</h3>
+                <p>Material and Sleep Performance Analysis</p>
+            </div>
         </div>
     </section>
 
