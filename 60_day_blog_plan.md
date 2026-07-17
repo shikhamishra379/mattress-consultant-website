@@ -4,7 +4,6 @@
 ---
 
 ## 🏗️ The Strategy: 4 Content Pillars
-To rank in 60 days, we alternate between these categories:
 1. **The "Myth-Buster" (AEO Focus):** Short, punchy answers to questions AI likes to feature.
 2. **The "Deep Audit" (Trust Focus):** Comparison of brands (Wakefit, Saatva, etc.).
 3. **The "Medical Guide" (Expertise Focus):** Spine health and orthopedic solutions.
@@ -12,39 +11,39 @@ To rank in 60 days, we alternate between these categories:
 
 ---
 
-## 🗓️ Month 1: Establishing Authority
-| Day | Topic | Target Keyword | Hindi/Hinglish Keywords |
+## 🗓️ Month 1: Establishing Authority (Revised for Ad Alignment)
+| Day | Topic | Target Keyword (Ads) | Hindi/Hinglish Keywords |
 | :--- | :--- | :--- | :--- |
-| **01** | The "Ortho" Scam: Why most hard mattresses are bad for back pain. | Orthopedic mattress back pain India | Gadda kharidne ke niyam |
-| **02** | 5 Signs your current mattress is killing your spine. | Mattress replacement signs | Purana gadda kab badle |
-| **03** | Natural Latex vs. Memory Foam: The ultimate comparison for hot sleepers. | Latex vs Memory Foam humidity | Gadda konsa achha hai |
-| **04** | Case Study: How I helped a client solve 5 years of neck pain in 15 mins. | Chronic neck pain sleep solution | Gardann dard ka ilaj |
-| **05** | The Truth about "SmartGrid" Technology: Is it just marketing? | SmartGrid mattress review | SmartGrid gadda review |
-| **06** | Side Sleepers Guide: Why you need a softer mattress than you think. | Best mattress for side sleepers | Karwat lekar sone ke liye gadda |
-| **07** | **[WEEKLY ROUNDUP]** Most asked questions this week on my WhatsApp. | Sleep consultant India | Gadda consultant Sandeep Mishra |
-| **08** | Wakefit vs. SleepyCat vs. Duroflex: 2026 Comparison. | Best mattress brand India 2026 | Sabse achha gadda konsa hai |
-| **09** | How your BMI changes your mattress requirements. | Mattress density for heavy sleepers | Vazann ke hisab se gadda |
-| **10** | Why your "10-Year Warranty" might be useless. | Mattress warranty terms explained | Gadda warranty ki sachai |
-| **11** | Cervical Spondylosis: Choosing the right pillow-mattress combo. | Cervical spondylosis mattress | Spondylosis ke liye best gadda |
-| **12** | 3 Reasons you wake up with a stiff lower back. | Morning back pain causes | Kamar dard kyu hota hai |
-| **13** | Pocket Springs vs. Bonnell Springs: What's the difference? | Pocket spring vs Bonnell |
-| **14** | **[CLIENT STORY]** Choosing a mattress for a senior citizen. | Best mattress for seniors India |
-| **15** | Memory Foam Heat Trap: How to stay cool in Mumbai/Chennai. | Cooling mattress India |
-| **16** | The "Hand-Push" Test vs. The "15-Minute Lying" Test. | How to test a mattress |
-| **17** | Buying a mattress for your new home? Read this first. | New home mattress guide |
-| **18** | Is a ₹2 Lakh mattress worth it? (Sealy/Tempur-Pedic Audit). | Luxury mattress review |
-| **19** | How to clean a mattress that has turned yellow. | Mattress cleaning hacks |
-| **20** | Sleep & Productivity: How elite CEOs choose their beds. | Peak performance sleep |
-| **21** | **[WEEKLY ROUNDUP]** Top 5 brands I recommended this week. | Mattress advisor India |
-| **22** | Sciatica Sleep Guide: Positions that reduce nerve pain. | Sciatica sleep positions |
-| **23** | Coir Mattresses: Why they are fading out of the market. | Rubberized coir mattress pros cons |
-| **24** | The "Off-Gassing" Report: Are mattress chemicals dangerous? | Toxic chemicals in mattresses |
-| **25** | Mattress Protectors: Essential or just an add-on? | Do I need a mattress protector? |
-| **26** | Wedding Gift Guide: Why a mattress is the best gift for couples. | Wedding gift ideas India |
-| **27** | Edge Support: Why you keep "rolling off" your bed. | Best mattress edge support |
-| **28** | HR Foam vs. PU Foam: Decoding the specs. | High resilience foam vs PU |
-| **29** | Mattress sizes in India: Standard vs. Custom Bed Dimensions. | King size mattress dimensions India |
-| **30** | **[MONTHLY RECAP]** The state of the Indian Mattress Industry 2026. | Mattress industry trends |
+| **01** | The "Ortho" Scam: Why most hard mattresses are bad for back pain. | best mattress for back pain | Gadda kharidne ke niyam |
+| **02** | 5 Signs your current mattress is killing your spine. | mattress buying guide | Purana gadda kab badle |
+| **03** | Natural Latex vs. Memory Foam: The ultimate comparison for hot sleepers. | latex vs memory foam | Gadda konsa achha hai |
+| **04** | Case Study: How I helped a client solve 5 years of neck pain in 15 mins. | mattress recommendation | Gardann dard ka ilaj |
+| **05** | The Truth about "SmartGrid" Technology: Is it just marketing? | best orthopedic mattress | SmartGrid gadda review |
+| **06** | Side Sleepers Guide: Why you need a softer mattress than you think. | which mattress should i buy | Karwat lekar sone ke liye gadda |
+| **07** | **[WEEKLY ROUNDUP]** Most asked questions this week on my WhatsApp. | mattress consultant | Gadda consultant Sandeep Mishra |
+| **08** | Wakefit vs. SleepyCat vs. Duroflex: 2026 Comparison. | wakefit vs duroflex | Sabse achha gadda konsa hai |
+| **09** | How your BMI changes your mattress requirements. | mattress expert | Vazann ke hisab se gadda |
+| **10** | Why your "10-Year Warranty" might be useless. | mattress buying advice | Gadda warranty ki sachai |
+| **11** | Cervical Spondylosis: Choosing the right pillow-mattress combo. | best mattress for back pain | Spondylosis ke liye best gadda |
+| **12** | 3 Reasons you wake up with a stiff lower back. | best orthopedic mattress | Kamar dard kyu hota hai |
+| **13** | Pocket Springs vs. Bonnell Springs: What's the difference? | memory foam vs spring mattress | Pocket spring vs Bonnell |
+| **14** | **[CLIENT STORY]** Choosing a mattress for a senior citizen. | mattress recommendation | Best mattress for seniors India |
+| **15** | Wakefit vs. Sleepwell: The Budget vs. Legacy Audit. | wakefit vs sleepwell | Wakefit ya Sleepwell konsa le |
+| **16** | The Luxury Audit: Is a ₹1 Lakh mattress actually better? | premium mattress consultation | Luxury mattress price check |
+| **17** | Hybrid Mattress vs. Latex: The Durability Battle. | hybrid mattress vs latex | Hybrid ya Latex |
+| **18** | Duroflex vs. Sleepwell: Decoding the 'Duropedic' tech. | duroflex vs sleepwell | Duroflex review India |
+| **19** | The "Price-Check" Challenge: How to save ₹15,000 on your next bed. | mattress buying advice | Mattress discount fraud |
+| **20** | The Sleep Company vs. Wakefit: Grid vs. Foam. | the sleep company vs wakefit | SmartGrid vs Memory foam |
+| **21** | **[WEEKLY ROUNDUP]** Top 5 brands I recommended this week. | Mattress advisor India | Top mattress brands list |
+| **22** | Sciatica Sleep Guide: Positions that reduce nerve pain. | Sciatica sleep positions | Sciatica ka gadda |
+| **23** | Coir Mattresses: Why they are fading out of the market. | Rubberized coir mattress pros cons | Coir vs Foam |
+| **24** | The "Off-Gassing" Report: Are mattress chemicals dangerous? | Toxic chemicals in mattresses | Gadda smell safety |
+| **25** | Mattress Protectors: Essential or just an add-on? | Do I need a mattress protector? | Mattress cover benefits |
+| **26** | Wedding Gift Guide: Why a mattress is the best gift for couples. | Wedding gift ideas India | Shaadi ke liye gadda |
+| **27** | Edge Support: Why you keep "rolling off" your bed. | Best mattress edge support | Mattress side support |
+| **28** | HR Foam vs. PU Foam: Decoding the specs. | High resilience foam vs PU | Foam quality check |
+| **29** | Mattress sizes in India: Standard vs. Custom Bed Dimensions. | King size mattress dimensions India | Mattress size guide |
+| **30** | **[MONTHLY RECAP]** The state of the Indian Mattress Industry 2026. | Mattress industry trends | Mattress market report |
 
 ---
 
