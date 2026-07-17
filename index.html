@@ -66,18 +66,30 @@
             line-height: 1.4;
         }
         .linkedin-btn {
-            display: inline-block;
-            padding: 12px 40px;
-            border: 2px solid #000;
-            color: #000;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 40px;
+            background: #8B0000;
+            color: #fff;
             text-decoration: none;
             font-weight: 700;
             text-transform: uppercase;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             transition: 0.3s;
             letter-spacing: 1px;
+            border-radius: 4px;
+            border: none;
         }
-        .linkedin-btn:hover { background: #000; color: #fff; }
+        .linkedin-btn:hover { background: #660000; transform: translateY(-2px); box-shadow: 0 10px 20px rgba(139,0,0,0.15); }
+        .linkedin-caption {
+            display: block;
+            margin-top: 15px;
+            font-size: 0.85rem;
+            color: #666;
+            font-weight: 500;
+            font-style: italic;
+        }
 
         /* Section Styling */
         .section-padding { padding: 80px 20px; max-width: 1200px; margin: auto; }
@@ -184,7 +196,11 @@
             <p class="hero-subheadline" style="font-size: 1.1rem; color: #444; font-weight: 500; line-height: 1.5; margin-bottom: 35px;">
                 Helping homeowners, families, luxury residences, architects, and hotels choose the right mattress through independent, science-backed advice, with no brand bias, no commissions, and no sales pressure.
             </p>
-            <a href="https://www.linkedin.com/in/sandeep-mishra-69ba479/" target="_blank" class="linkedin-btn">Linkedin</a>
+            <a href="https://www.linkedin.com/in/sandeep-mishra-69ba479/" target="_blank" class="linkedin-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-4 2.239-4 5v14c0 2.761 1.239 5 4 5h14c2.762 0 4-2.239 4-5v-14c0-2.761-1.238-5-4-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                Professional Profile
+            </a>
+            <span class="linkedin-caption">View my professional experience, industry insights, and credentials on LinkedIn.</span>
         </div>
         <div class="hero-image">
             <img src="assets/sandeep.jpg" alt="Sandeep Mishra - Global Sleep Consultant">
