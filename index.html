@@ -92,28 +92,53 @@
         }
 
         /* Generic Section Styles */
-        .section-padding { padding: 80px 20px; max-width: 1200px; margin: auto; }
-        .section-title { font-family: 'Antonio', sans-serif; font-size: 2.5rem; text-transform: uppercase; text-align: center; margin-bottom: 60px; color: #000; letter-spacing: 1px; }
+        .section-padding { padding: 120px 20px; max-width: 1300px; margin: auto; }
+        .section-title { font-family: 'Antonio', sans-serif; font-size: 2.8rem; text-transform: uppercase; text-align: center; margin-bottom: 15px; color: #000; letter-spacing: 1px; }
+        .section-subtitle { text-align: center; max-width: 700px; margin: 0 auto 80px auto; color: #666; font-size: 1.15rem; font-weight: 400; line-height: 1.5; }
 
-        /* Educational Cards */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; }
-        .card { 
+        /* Symmetrical Science Grid */
+        .science-grid { 
+            display: grid; 
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 25px; 
+            align-items: stretch;
+        }
+        .science-card { 
             background: var(--white); 
             padding: 0; 
-            border: 1px solid #eee; 
+            border: 1px solid #e5e7eb; 
+            border-radius: 4px;
             overflow: hidden; 
             display: flex; 
             flex-direction: column; 
-            transition: all 0.4s ease; 
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
             height: 100%;
         }
-        .card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.06); border-color: #000; }
-        .card img { width: 100%; height: 240px; object-fit: cover; filter: grayscale(0.2); }
-        .card-content { padding: 35px; flex-grow: 1; }
-        .card h3 { font-family: 'Antonio', sans-serif; font-size: 1.6rem; margin-bottom: 15px; text-transform: uppercase; color: #000; }
-        .card p { font-size: 1rem; color: #555; line-height: 1.5; }
+        .science-card:hover { transform: translateY(-5px); box-shadow: 0 25px 50px rgba(0,0,0,0.06); border-color: #000; }
+        .science-card img { width: 100%; aspect-ratio: 16/10; object-fit: cover; border-bottom: 1px solid #f3f4f6; }
+        .science-card-content { padding: 30px; display: flex; flex-direction: column; flex-grow: 1; text-align: left; }
+        .science-card h3 { font-family: 'Antonio', sans-serif; font-size: 1.4rem; margin-bottom: 15px; text-transform: uppercase; color: #000; letter-spacing: 0.5px; }
+        .science-card p { font-size: 0.95rem; color: #4b5563; line-height: 1.6; margin-top: auto; }
 
-        /* Form */
+        /* Trust Section Styles */
+        .trust-section { background-color: var(--white); border-top: 1px solid #eee; border-bottom: 1px solid #eee; padding: 80px 20px !important; }
+        .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: center; }
+        .trust-card { padding: 40px 20px; position: relative; }
+        .trust-card:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: -10px;
+            top: 20%;
+            height: 60%;
+            width: 1px;
+            background-color: #eee;
+        }
+        .trust-card h3 { font-family: 'Antonio', sans-serif; font-size: 2.2rem; margin-bottom: 10px; color: #000; text-transform: uppercase; }
+        .trust-card p { font-size: 0.9rem; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Form Styling */
+        #quiz { background: #f9f9f9; padding: 100px 20px !important; }
         .form-container { max-width: 650px; margin: auto; background: #fff; padding: 50px; border: 1px solid #eee; box-shadow: 0 10px 40px rgba(0,0,0,0.05); }
         .form-group { margin-bottom: 25px; }
         .form-group label { display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; color: #555; }
@@ -125,14 +150,45 @@
         footer { background: #000; color: #fff; padding: 80px 20px; text-align: center; }
         footer .signature-logo { color: #fff; display: block; margin-bottom: 20px; }
 
+        @media (max-width: 1024px) {
+            .science-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+            .trust-grid { grid-template-columns: repeat(2, 1fr); }
+            .trust-card:nth-child(2)::after { display: none; }
+        }
+
         @media (max-width: 768px) {
             .hero-new { flex-direction: column; text-align: center; padding-top: 20px; }
             .hero-text { padding-right: 0; margin-bottom: 40px; }
             .hero-headline { font-size: 2.5rem; }
             .main-nav { gap: 15px; font-size: 0.7rem; }
             .main-header { flex-direction: column; gap: 15px; }
+            .section-title { font-size: 2.2rem; }
+            .section-padding { padding: 80px 20px; }
+        }
+
+        @media (max-width: 640px) {
+            .science-grid { grid-template-columns: 1fr; }
+            .trust-grid { grid-template-columns: 1fr; }
+            .trust-card::after { display: none; }
         }
     </style>
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Sandeep Mishra",
+      "jobTitle": "Independent Mattress Consultant",
+      "telephone": "+91-9811008230",
+      "url": "https://mattress-consultant-website.vercel.app",
+      "sameAs": ["https://www.linkedin.com/in/sandeep-mishra-69ba479/"],
+      "knowsLanguage": ["English", "Hindi", "Bengali", "Marathi", "Telugu", "Tamil", "Gujarati", "Urdu", "Kannada", "Odia", "Malayalam", "Punjabi", "Mandarin", "Spanish", "French", "Arabic", "Portuguese"],
+      "description": "Expert independent mattress consultant and brand strategist with 22 years of elite experience.",
+      "knowsAbout": ["Mattress Science", "Sleep Ergonomics", "B2B Procurement"],
+      "address": { "@type": "PostalAddress", "addressCountry": "IN" }
+    }
+    </script>
 </head>
 <body>
 
@@ -171,49 +227,84 @@
         </div>
     </section>
 
+    <!-- Trust Section -->
+    <section class="trust-section section-padding">
+        <h2 class="section-title">Why People Trust My Advice</h2>
+        <div class="trust-grid">
+            <div class="trust-card">
+                <h3>22+ Years</h3>
+                <p>Industry Experience</p>
+            </div>
+            <div class="trust-card">
+                <h3>Independent</h3>
+                <p>Brand-Neutral Advice</p>
+            </div>
+            <div class="trust-card">
+                <h3>Luxury & Hospitality</h3>
+                <p>Residential and B2B Expertise</p>
+            </div>
+            <div class="trust-card">
+                <h3>Science-Based</h3>
+                <p>Material and Sleep Performance Analysis</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emotional Section -->
+    <section id="about" class="intro-emotional section-padding" style="text-align: center; background-color: var(--white); border-top: 1px solid #eee;">
+        <div class="container" style="max-width: 900px; margin: auto;">
+            <h2 class="section-title" style="margin-bottom: 40px; color: #000;">Your Mattress Is More Than Just a Purchase</h2>
+            <div style="font-size: 1.15rem; color: #333; line-height: 1.8; font-weight: 400;">
+                <p style="margin-bottom: 25px;">You will spend nearly <span style="color: #8B0000; font-weight: 700;">25 years of your life sleeping</span>.</p>
+                <p style="margin-bottom: 25px;">Choosing the wrong mattress doesn't just waste money. It can affect your spinal health, sleep quality, daily energy, recovery, and overall well-being for years.</p>
+                <p style="margin-bottom: 25px;">Most people buy a mattress based on advertisements, showroom experiences, or sales recommendations. The right choice should instead be based on your body type, sleeping position, health conditions, comfort preferences, and long-term support needs.</p>
+                <p>That's why I provide completely <span style="color: #8B0000; font-weight: 700;">independent, science-backed mattress consultations</span>, helping you make an informed decision before investing in one of the most important products for your home.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Decoding the Science Section -->
-    <section id="types" class="section-padding">
+    <section id="types" class="section-padding" style="background-color: #fff; border-top: 1px solid #eee;">
         <h2 class="section-title">Decoding the Science</h2>
-        <p style="text-align:center; max-width:700px; margin:-40px auto 60px auto; color:#666; font-size:1.1rem;">
-            Understanding the materials behind better sleep helps you make a smarter buying decision.
-        </p>
-        <div class="grid">
+        <p class="section-subtitle">Understanding the materials behind better sleep helps you make a smarter buying decision.</p>
+        
+        <div class="science-grid">
             <!-- Card 1: Natural Latex -->
-            <div class="card">
-                <img src="assets/latex.jpg" alt="Natural Latex Material Diagram">
-                <div class="card-content">
+            <div class="science-card">
+                <img src="assets/sci-latex.jpg" alt="Natural Latex Material Science">
+                <div class="science-card-content">
                     <h3>Natural Latex</h3>
                     <p>Naturally breathable, highly durable, and excellent for pressure relief. Ideal for hot sleepers, allergy-conscious individuals, and those seeking long-term support.</p>
                 </div>
             </div>
             <!-- Card 2: Pocket Springs -->
-            <div class="card">
-                <img src="assets/hybrid.jpg" alt="Pocket Spring Construction Diagram">
-                <div class="card-content">
+            <div class="science-card">
+                <img src="assets/sci-springs.jpg" alt="Pocket Spring Technology">
+                <div class="science-card-content">
                     <h3>Pocket Springs</h3>
-                    <p>Individually wrapped springs provide targeted support, improve spinal alignment, reduce partner disturbance, and enhance airflow throughout the mattress.</p>
+                    <p>Individually wrapped springs provide targeted support, improve spinal alignment, reduce partner disturbance, and enhance airflow throughout the mattress structure.</p>
                 </div>
             </div>
             <!-- Card 3: Hybrid Construction -->
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&q=80&w=800" alt="Hybrid Mattress Cross Section">
-                <div class="card-content">
+            <div class="science-card">
+                <img src="assets/sci-hybrid.jpg" alt="Hybrid Mattress Engineering">
+                <div class="science-card-content">
                     <h3>Hybrid Construction</h3>
-                    <p>Combines supportive springs with premium comfort layers to balance pressure relief, responsiveness, cooling, and long-term durability.</p>
+                    <p>Combines supportive pocket springs with premium comfort layers to balance clinical pressure relief, responsiveness, cooling, and long-term structural durability.</p>
                 </div>
             </div>
             <!-- Card 4: Pressure Relief -->
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80&w=800" alt="Sleep Comfort and Pressure Relief">
-                <div class="card-content">
+            <div class="science-card">
+                <img src="assets/sci-pressure.jpg" alt="Advanced Pressure Relief Support">
+                <div class="science-card-content">
                     <h3>Pressure Relief</h3>
-                    <p>Materials designed to reduce pressure on the shoulders, hips, and lower back while promoting proper spinal alignment and improved sleep comfort.</p>
+                    <p>Advanced materials designed to reduce pressure on shoulders, hips, and lower back while promoting proper spinal alignment and significantly improved sleep comfort.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Form -->
+    <!-- Lead Audit Form -->
     <section id="quiz" class="section-padding">
         <div class="form-container">
             <h2 class="section-title" style="margin-bottom: 30px;">Start Your Lead Audit</h2>
